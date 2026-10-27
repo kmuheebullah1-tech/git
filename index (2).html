@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glaze & Wheel – Pottery studio and classes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#">Glaze &amp; Wheel</a>
+  <nav>
+    <a href="#classes">Classes</a>
+    <a href="#shop">Shop</a>
+    <a href="#join">Book a seat</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Pick a glaze. Then make the pot.</h1>
+      <p>A small pottery studio with open wheels, a shared kiln and classes for first-timers. Try the colors below, then book a seat.</p>
+      <div class="swatches" role="radiogroup" aria-label="Glaze color">
+        <button class="swatch active" role="radio" aria-checked="true" data-color="#7FA99B" data-name="Celadon" style="--c:#7FA99B"></button>
+        <button class="swatch" role="radio" aria-checked="false" data-color="#2B4C8C" data-name="Cobalt" style="--c:#2B4C8C"></button>
+        <button class="swatch" role="radio" aria-checked="false" data-color="#E3B23C" data-name="Honey" style="--c:#E3B23C"></button>
+        <button class="swatch" role="radio" aria-checked="false" data-color="#8E3B46" data-name="Oxblood" style="--c:#8E3B46"></button>
+      </div>
+      <p class="glaze-name">Glaze: <strong id="glazeName">Celadon</strong></p>
+    </div>
+    <svg class="pot" viewBox="0 0 200 240" role="img" aria-label="A vase that changes color with the glaze you pick">
+      <ellipse cx="100" cy="226" rx="62" ry="8" fill="#14232B" opacity=".15"/>
+      <path id="vase" d="M78 20 H122 L118 52 C170 76 176 150 148 208 C144 218 136 222 126 222 H74 C64 222 56 218 52 208 C24 150 30 76 82 52 Z" fill="#7FA99B"/>
+      <path d="M60 120 C90 134 110 134 140 120" fill="none" stroke="#14232B" stroke-opacity=".25" stroke-width="3"/>
+      <path d="M46 160 C80 178 120 178 154 160" fill="none" stroke="#14232B" stroke-opacity=".25" stroke-width="3"/>
+    </svg>
+  </section>
+
+  <section id="classes" class="classes">
+    <h2>Classes this month</h2>
+    <ul>
+      <li><h3>First wheel</h3><p>Centering, pulling walls, one small bowl to take home. Tuesdays, 6 pm. Rs 4,500.</p></li>
+      <li><h3>Handbuilding</h3><p>Coil and slab mugs, no wheel needed. Saturdays, 11 am. Rs 3,800.</p></li>
+      <li><h3>Glaze day</h3><p>Paint and dip your bisque pieces, then we fire them. First Sunday, 2 pm. Rs 2,500.</p></li>
+    </ul>
+  </section>
+
+  <section id="shop" class="shop">
+    <h2>From the shelf</h2>
+    <p>Made by members. Each piece is one of one.</p>
+    <div class="items">
+      <article><div class="chip" style="background:#7FA99B"></div><h3>Tea bowl</h3><p>Rs 1,800</p></article>
+      <article><div class="chip" style="background:#2B4C8C"></div><h3>Bud vase</h3><p>Rs 2,400</p></article>
+      <article><div class="chip" style="background:#E3B23C"></div><h3>Mug</h3><p>Rs 2,100</p></article>
+    </div>
+  </section>
+
+  <section id="join" class="join">
+    <h2>Book a seat</h2>
+    <form id="bookForm" novalidate>
+      <label>Name <input id="name" name="name" type="text" autocomplete="name" required></label>
+      <label>Email <input id="email" name="email" type="email" autocomplete="email" required></label>
+      <label>Class
+        <select id="cls" name="cls">
+          <option>First wheel</option>
+          <option>Handbuilding</option>
+          <option>Glaze day</option>
+        </select>
+      </label>
+      <button type="submit">Reserve my seat</button>
+      <p id="formMsg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer><p>Glaze &amp; Wheel. Open Tuesday to Sunday, 10 am to 8 pm.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
